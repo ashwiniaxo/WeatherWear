@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWear - Clothing Recommendations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>WeatherWear</h1>
+        <p>Get personalized clothing recommendations based on the weather forecast.</p>
+
+        <form id="weatherForm">
+            <label for="location">Enter Location:</label>
+            <input type="text" id="location" placeholder="e.g., London, New York" required>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" required>
+
+            <button type="submit">Get Recommendation</button>
+        </form>
+
+        <div id="result" class="result">
+            <!-- Weather and clothing recommendation will appear here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="serveur.js"></script>
+</body>
+</html>

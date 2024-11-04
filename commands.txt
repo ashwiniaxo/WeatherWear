@@ -1,0 +1,4 @@
+# Commande à faire dans le terminal pour installer node js dans project
+npm install express 
+
+# Commande à faire pour run le serv node js
