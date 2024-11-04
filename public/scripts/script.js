@@ -6,18 +6,15 @@ document.getElementById('weatherForm').addEventListener('submit', async function
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = 'Loading...';
 
-    // Fetch weather data
-    const apiKey = 'Y2d42d8c4639f45578e315016240411';
-    const weatherUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&dt=${date}`;
-
     try {
-        const response = await fetch(weatherUrl);
-        if (!response.ok) throw new Error('Weather data not available');
-        
+        // Envoyer une requête au serveur avec les valeurs de l'utilisateur
+        const response = await fetch(`/weather/forecast?location=${location}&date=${date}`);
+        if (!response.ok) throw new Error('Could not retrieve weather data.');
+
         const data = await response.json();
         const forecast = data.forecast.forecastday[0].day;
-        
-        // Simple logic to suggest clothing based on temperature
+
+        // Logique pour suggérer des vêtements en fonction de la température
         let clothingRecommendation;
         if (forecast.avgtemp_c > 25) {
             clothingRecommendation = 'It’s hot! Wear light clothes like a T-shirt and shorts.';
@@ -27,9 +24,11 @@ document.getElementById('weatherForm').addEventListener('submit', async function
             clothingRecommendation = 'It’s cold! Dress warmly with a coat, scarf, and gloves.';
         }
 
+        // Affichage du résultat dans la page
         resultDiv.innerHTML = `
             <p>Weather for ${location} on ${date}:</p>
             <p>Temperature: ${forecast.avgtemp_c}°C</p>
+            <p>Condition: ${forecast.condition.text}</p>
             <p>${clothingRecommendation}</p>
         `;
     } catch (error) {

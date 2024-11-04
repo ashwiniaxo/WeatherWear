@@ -2,3 +2,7 @@
 npm install express 
 
 # Commande à faire pour run le serv node js
+npm start
+
+# Commande pour des appels API dans un environnement Node.js
+node install node-fetch
