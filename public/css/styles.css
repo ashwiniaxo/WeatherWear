@@ -6,8 +6,11 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #1e1e2e;
-    color: #ffffff;
+    /*background-color: #01012b;*/
+    background-image: url(https://i.pinimg.com/originals/af/12/ec/af12ec2f13300c2e44ab98f9d892e1c8.gif);
+    color: #d1f7ff;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +19,7 @@ body {
 
 .container {
     text-align: center;
-    background-color: #2d2d3f;
+    background-color: #dec2cb; /* Soft pinkish-purple for the container */
     padding: 20px;
     border-radius: 8px;
     width: 300px;
@@ -24,7 +27,7 @@ body {
 
 h1 {
     font-size: 24px;
-    color: #62c1f0;
+    color: #92a8d1; /* Pastel blue for the title */
 }
 
 form {
@@ -38,22 +41,35 @@ input[type="text"], input[type="date"] {
     border: none;
     border-radius: 4px;
     font-size: 16px;
+    color: #2e2e2e; /* Dark gray for input text */
+    background-color: #c5b9cd; /* Light purple for inputs */
 }
 
 button {
     padding: 10px;
     font-size: 16px;
-    background-color: #62c1f0;
+    background-color: #92a8d1; /* Soft blue for the button */
     border: none;
     border-radius: 4px;
+    color: #ffffff; /* White text on the button */
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
 }
 
+/* Hover Animation */
 button:hover {
-    background-color: #519dc1;
+    background-color: #abb1cf; /* Slightly darker pastel blue */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Click Animation */
+button:active {
+    transform: scale(0.95); /* Button shrink effect on click */
+    background-color: #c5b9cd; /* Slightly muted color when clicked */
 }
 
 .result {
     margin-top: 20px;
     font-size: 18px;
+    color: #2e2e2e; /* Dark gray for result text */
 }
