@@ -1,9 +1,15 @@
 import express from 'express';
 import fetch from 'node-fetch';
+import dotenv from 'dotenv';
+
+dotenv.config();
+//dotenv.config();
+console.log(process.env.MY_KEY); // This should print your API key in the terminal
+
 
 const app = express();
 const PORT = 3000;
-const apiKey = '2d42d8c4639f45578e315016240411'; // Remplacez par votre clé API WeatherAPI
+const apiKey = process.env.MY_KEY;
 
 app.use(express.static('public', {
     setHeaders: (res, path) => {
@@ -30,5 +36,5 @@ app.get('/weather/forecast', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Serveur en cours d'exécution sur http://localhost:${PORT}`);
+    console.log(`Server running at http://localhost:${PORT}`);
 });

@@ -1,3 +1,6 @@
+# Commande pour initialiser un projet node js
+npm init
+
 # Commande à faire dans le terminal pour installer node js dans project
 npm install express 
 
@@ -6,3 +9,5 @@ npm start
 
 # Commande pour des appels API dans un environnement Node.js
 node install node-fetch
+
+# Commande pour loader des variables d'environnement dans un projet Node.js:
