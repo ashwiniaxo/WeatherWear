@@ -19,7 +19,8 @@ body {
 
 .container {
     text-align: center;
-    background-color: #dec2cb; /* Soft pinkish-purple for the container */
+    background-color: #dec2cb;
+    /* Soft pinkish-purple for the container */
     padding: 20px;
     border-radius: 8px;
     width: 300px;
@@ -27,7 +28,8 @@ body {
 
 h1 {
     font-size: 24px;
-    color: #92a8d1; /* Pastel blue for the title */
+    color: #92a8d1;
+    /* Pastel blue for the title */
 }
 
 form {
@@ -42,17 +44,21 @@ input[type="date"] {
     border: none;
     border-radius: 4px;
     font-size: 16px;
-    color: #2e2e2e; /* Dark gray for input text */
-    background-color: #c5b9cd; /* Light purple for inputs */
+    color: #2e2e2e;
+    /* Dark gray for input text */
+    background-color: #c5b9cd;
+    /* Light purple for inputs */
 }
 
 button {
     padding: 10px;
     font-size: 16px;
-    background-color: #92a8d1; /* Soft blue for the button */
+    background-color: #92a8d1;
+    /* Soft blue for the button */
     border: none;
     border-radius: 4px;
-    color: #ffffff; /* White text on the button */
+    color: #ffffff;
+    /* White text on the button */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
 }
@@ -69,18 +75,23 @@ button {
 
 /* Hover Animation */
 button:hover {
-    background-color: #abb1cf; /* Slightly darker pastel blue */
-    transform: scale(1.05); /* Slightly enlarge button on hover */
+    background-color: #abb1cf;
+    /* Slightly darker pastel blue */
+    transform: scale(1.05);
+    /* Slightly enlarge button on hover */
 }
 
 /* Click Animation */
 button:active {
-    transform: scale(0.95); /* Button shrink effect on click */
-    background-color: #c5b9cd; /* Slightly muted color when clicked */
+    transform: scale(0.95);
+    /* Button shrink effect on click */
+    background-color: #c5b9cd;
+    /* Slightly muted color when clicked */
 }
 
 .result {
     margin-top: 20px;
     font-size: 18px;
-    color: #2e2e2e; /* Dark gray for result text */
+    color: #2e2e2e;
+    /* Dark gray for result text */
 }
