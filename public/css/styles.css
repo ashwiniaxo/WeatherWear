@@ -36,7 +36,8 @@ form {
     gap: 10px;
 }
 
-input[type="text"], input[type="date"] {
+input[type="text"],
+input[type="date"] {
     padding: 10px;
     border: none;
     border-radius: 4px;
@@ -54,6 +55,16 @@ button {
     color: #ffffff; /* White text on the button */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
+}
+
+#date-selection {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#date {
+    flex: 1;
 }
 
 /* Hover Animation */

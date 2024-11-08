@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeatherWear - Clothing Recommendations</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
     <div class="container">
         <h1>WeatherWear</h1>
@@ -16,7 +18,10 @@
             <input type="text" id="location" placeholder="What's your city?" required>
 
             <label for="date">Select Date:</label>
-            <input type="date" id="date" required>
+            <span id="date-selection">
+                <input type="date" id="date" required>
+                <button id="date-today" type="button">Today</button>
+            </span>
 
             <button type="submit">Get Recommendation</button>
         </form>
@@ -26,6 +31,7 @@
         </div>
     </div>
 
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/script.js" defer></script>
 </body>
+
 </html>
