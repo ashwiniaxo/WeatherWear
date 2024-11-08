@@ -6,8 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    /*background-color: #01012b;*/
-    background-image: url(https://i.pinimg.com/originals/af/12/ec/af12ec2f13300c2e44ab98f9d892e1c8.gif);
+    background-image: url("https://i.pinimg.com/originals/af/12/ec/af12ec2f13300c2e44ab98f9d892e1c8.gif");
     color: #d1f7ff;
     background-repeat: no-repeat;
     background-size: cover;
@@ -51,7 +50,7 @@ button {
     background-color: #92a8d1; /* Soft blue for the button */
     border: none;
     border-radius: 4px;
-    color: #ffffff; /* White text on the button */
+    color: #fff; /* White text on the button */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
 }
