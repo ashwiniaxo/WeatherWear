@@ -5,7 +5,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+//const PORT = 3000;
+const PORT = process.env.PORT || 4000 
 const apiKey = process.env.MY_KEY;
 
 app.use(express.static('public', {
