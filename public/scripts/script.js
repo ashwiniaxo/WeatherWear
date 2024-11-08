@@ -1,13 +1,15 @@
+const today = document.getElementById('date-today');
+const date = document.getElementById('date');
+
 document.getElementById('weatherForm').addEventListener('submit', async function (event) {
     event.preventDefault();
 
     const location = document.getElementById('location').value;
-    const date = document.getElementById('date').value;
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = 'Loading...';
 
     try {
-        const response = await fetch(`/weather/forecast?location=${location}&date=${date}`);
+        const response = await fetch(`/weather/forecast?location=${location}&date=${date.value}`);
         if (!response.ok) throw new Error('Could not retrieve weather data.');
 
         const data = await response.json();
@@ -34,7 +36,7 @@ document.getElementById('weatherForm').addEventListener('submit', async function
         }
 
         resultDiv.innerHTML = `
-            <p>Weather for ${location} on ${date}:</p>
+            <p>Weather for ${location} on ${date.value}:</p>
             <p>Temperature: ${forecast.avgtemp_c}°C</p>
             <p>Condition: ${forecast.condition.text}</p>
             <p>${clothingRecommendation}</p>
@@ -42,4 +44,8 @@ document.getElementById('weatherForm').addEventListener('submit', async function
     } catch (error) {
         resultDiv.innerHTML = 'Error: Could not retrieve weather data.';
     }
+});
+
+today.addEventListener('click', () => {
+    date.value = new Date().toISOString().split('T')[0];
 });
