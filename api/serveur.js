@@ -2,14 +2,7 @@ import express from 'express';
 import fetch from 'node-fetch';
 import dotenv from 'dotenv';
 
-
-// Charger .env uniquement en local
-if (process.env.NODE_ENV !== 'production') {
-    dotenv.config();
-}
-//dotenv.config();
-console.log(process.env.MY_KEY); // This should print your API key in the terminal
-
+dotenv.config();
 
 const app = express();
 const PORT = 3000;
