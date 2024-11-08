@@ -1,4 +1,4 @@
-document.getElementById('weatherForm').addEventListener('submit', async function (event) {
+document.getElementById('weather-form').addEventListener('submit', async function (event) {
     event.preventDefault();
 
     const location = document.getElementById('location').value;
