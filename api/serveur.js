@@ -2,14 +2,18 @@ import express from 'express';
 import fetch from 'node-fetch';
 import dotenv from 'dotenv';
 import path from 'path'; // Import the 'path' module to handle paths
+import { fileURLToPath } from 'url';
 
 dotenv.config();
 
 const app = express();
-//const PORT = 3000;
 const PORT = process.env.PORT || 4000 
 const apiKey = process.env.MY_KEY;
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use('/images', express.static(path.join(__dirname, 'public', 'images')));
 app.use(express.static('public', {
     setHeaders: (res, path) => {
         if (path.endsWith('.js')) {
@@ -18,8 +22,6 @@ app.use(express.static('public', {
     }
 }));
 
-// If needed, you can also specifically define '/images' route as an alias
-app.use('/images', express.static(path.join(__dirname, 'public', 'images')));
 
 app.get('/weather/forecast', async (req, res) => {
     const { location, date } = req.query;
