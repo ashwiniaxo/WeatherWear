@@ -57,12 +57,12 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach(button => {
     button.addEventListener('mouseenter', () => {
         cursor.style.backgroundImage = "url('/images/custom-cursor-hover.png')";
-        cursor.style.width = '40px';
-        cursor.style.height = '40px';
+        cursor.style.width = '50px';
+        cursor.style.height = '50px';
     });
     button.addEventListener('mouseleave', () => {
         cursor.style.backgroundImage = "url('/images/custom-cursor.png')";
-        cursor.style.width = '30px';
-        cursor.style.height = '30px';
+        cursor.style.width = '50px';
+        cursor.style.height = '50px';
     });
 });

@@ -1,3 +1,6 @@
+html{
+    cursor: none;
+}
 * {
     margin: 0;
     padding: 0;
@@ -22,8 +25,8 @@ body {
 /* Custom Cursor Styles */
 .custom-cursor {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     background-image: url('/images/custom-cursor.png'); /* Default cursor image */
     background-size: contain;
     background-repeat: no-repeat;
@@ -35,8 +38,8 @@ body {
 /* Cursor changes when hovering over button */
 button:hover ~ .custom-cursor {
     background-image: url('/images/custom-cursor-hover.png'); /* Hover cursor image */
-    width: 40px; /* Adjust size for hover state if needed */
-    height: 40px;
+    width: 50px; /* Adjust size for hover state if needed */
+    height: 50px;
 }
 
 .container {
