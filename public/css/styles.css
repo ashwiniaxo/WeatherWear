@@ -15,6 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    cursor: url('/images/custom-cursor.png') 10 10, auto;
 }
 
 .container {
@@ -60,6 +61,7 @@ button {
 button:hover {
     background-color: #abb1cf; /* Slightly darker pastel blue */
     transform: scale(1.05); /* Slightly enlarge button on hover */
+    cursor: url('/images/custom-cursor-hover.png'), auto;
 }
 
 /* Click Animation */
