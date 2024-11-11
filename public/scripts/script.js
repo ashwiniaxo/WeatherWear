@@ -42,4 +42,27 @@ document.getElementById('weatherForm').addEventListener('submit', async function
     } catch (error) {
         resultDiv.innerHTML = 'Error: Could not retrieve weather data.';
     }
+
+
+});
+
+const cursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+});
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => {
+    button.addEventListener('mouseenter', () => {
+        cursor.style.backgroundImage = "url('/images/custom-cursor-hover.png')";
+        cursor.style.width = '40px';
+        cursor.style.height = '40px';
+    });
+    button.addEventListener('mouseleave', () => {
+        cursor.style.backgroundImage = "url('/images/custom-cursor.png')";
+        cursor.style.width = '30px';
+        cursor.style.height = '30px';
+    });
 });

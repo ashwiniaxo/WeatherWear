@@ -1,6 +1,7 @@
 import express from 'express';
 import fetch from 'node-fetch';
 import dotenv from 'dotenv';
+import path from 'path'; // Import the 'path' module to handle paths
 
 dotenv.config();
 
@@ -16,6 +17,9 @@ app.use(express.static('public', {
         }
     }
 }));
+
+// If needed, you can also specifically define '/images' route as an alias
+app.use('/images', express.static(path.join(__dirname, 'public', 'images')));
 
 app.get('/weather/forecast', async (req, res) => {
     const { location, date } = req.query;
