@@ -5,7 +5,9 @@ WeatherWear est une application web qui fournit aux utilisateurs des recommandat
 
 L'application récupère des données météorologiques en temps réel à partir d'une API externe, les traite, et fournit des recommandations basées sur des conditions telles que la température, la pluie et la neige. Ce projet est accessible en ligne et peut être consulté sur le site [WeatherWear](https://weatherwear.onrender.com/).
 > **Note :** Ce projet est encore en développement et fait l'objet d'améliorations continues. De nouvelles fonctionnalités et optimisations sont en cours d'élaboration.
-> 
+>
+> **Attente Initiale :** Lors de l'accès au site, une attente d'environ 1 minute peut être nécessaire pour le chargement initial de l'application. Cette attente est due au fait que le serveur se met en veille lorsqu'il n'est pas utilisé, afin d'économiser les ressources.
+
 ## Réalisé par
 [Ashwinia Yogarajah](https://github.com/ashwiniaxo)
 
