@@ -1,6 +1,3 @@
-html{
-    cursor: none;
-}
 * {
     margin: 0;
     padding: 0;
@@ -10,90 +7,124 @@ html{
 
 body {
     font-family: Arial, sans-serif;
-    /*background-color: #01012b;*/
-    background-image: url(https://i.pinimg.com/originals/af/12/ec/af12ec2f13300c2e44ab98f9d892e1c8.gif);
-    color: #d1f7ff;
+    background: linear-gradient(135deg, #92a8d1, #f7cac9);
+    color: #ffffff;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    cursor: none; /* Hides the default cursor */
+    cursor: none;
 }
 
-/* Custom Cursor Styles */
+
 .custom-cursor {
     position: absolute;
     width: 50px;
     height: 50px;
-    background-image: url('/images/custom-cursor.png'); /* Default cursor image */
+    background-image: url('/images/custom-cursor.png');
     background-size: contain;
     background-repeat: no-repeat;
     pointer-events: none;
-    transition: transform 0.3s ease;
     transform: translate(-50%, -50%);
+    z-index: 1000;
 }
 
-/* Cursor changes when hovering over button */
 button:hover ~ .custom-cursor {
-    background-image: url('/images/custom-cursor-hover.png'); /* Hover cursor image */
-    width: 50px; /* Adjust size for hover state if needed */
+    background-image: url('/images/custom-cursor-hover.png');
+    width: 50px;
     height: 50px;
+}
+
+/* Glowing Trail */
+.cursor-trail {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgba(255, 192, 203, 0.8); /* Soft pink glow */
+    box-shadow: 0 0 10px 5px rgba(255, 192, 203, 0.5);
+    pointer-events: none;
+    animation: fadeOut 1s linear forwards;
+    z-index: 999;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
 }
 
 .container {
     text-align: center;
-    background-color: #dec2cb; /* Soft pinkish-purple for the container */
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.3);
+    width: 350px;
 }
 
 h1 {
-    font-size: 24px;
-    color: #92a8d1; /* Pastel blue for the title */
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #92a8d1, 0 0 20px #f7cac9, 0 0 30px #f7cac9;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 input[type="text"], input[type="date"] {
     padding: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 16px;
-    color: #2e2e2e; /* Dark gray for input text */
-    background-color: #c5b9cd; /* Light purple for inputs */
+    color: #2e2e2e;
+    background-color: #c5b9cd;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+input[type="text"]:hover, input[type="date"]:hover {
+    transform: scale(1.05);
 }
 
 button {
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
-    background-color: #92a8d1; /* Soft blue for the button */
+    background: linear-gradient(135deg, #f7cac9, #92a8d1);
     border: none;
-    border-radius: 4px;
-    color: #ffffff; /* White text on the button */
+    border-radius: 8px;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
     transition: background-color 0.3s, transform 0.1s;
+    cursor: pointer;
 }
 
-/* Hover Animation */
 button:hover {
-    background-color: #abb1cf; /* Slightly darker pastel blue */
-    transform: scale(1.05); /* Slightly enlarge button on hover */
+    background: linear-gradient(135deg, #f7cac9, #abb1cf);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #92a8d1;
 }
 
-/* Click Animation */
 button:active {
-    transform: scale(0.95); /* Button shrink effect on click */
-    background-color: #c5b9cd; /* Slightly muted color when clicked */
+    transform: scale(0.95);
+    background: linear-gradient(135deg, #c5b9cd, #92a8d1);
 }
 
 .result {
     margin-top: 20px;
     font-size: 18px;
-    color: #2e2e2e; /* Dark gray for result text */
+    color: #2e2e2e;
 }

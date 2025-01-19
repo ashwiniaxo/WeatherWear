@@ -47,12 +47,28 @@ document.getElementById('weatherForm').addEventListener('submit', async function
 });
 
 const cursor = document.querySelector('.custom-cursor');
+const body = document.body;
 
 document.addEventListener('mousemove', (e) => {
     cursor.style.left = `${e.clientX}px`;
     cursor.style.top = `${e.clientY}px`;
+
+    // Create a trail dot
+    const trailDot = document.createElement('div');
+    trailDot.classList.add('cursor-trail');
+    trailDot.style.left = `${e.clientX}px`;
+    trailDot.style.top = `${e.clientY}px`;
+
+    
+    body.appendChild(trailDot);
+
+    
+    setTimeout(() => {
+        trailDot.remove();
+    }, 1000); 
 });
 
+// Mouvement pour le curseur
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => {
     button.addEventListener('mouseenter', () => {

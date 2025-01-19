@@ -1,18 +1,26 @@
 {
   "name": "weatherwear",
   "version": "1.0.0",
-  "description": "",
-  "main": "serveur.js",
+  "description": "WeatherWear est une application web qui fournit aux utilisateurs des recommandations vestimentaires personnalisées en fonction des prévisions météorologiques. Développé avec JavaScript, Node.js, Express, HTML, et CSS, ce projet permet aux utilisateurs de saisir le nom de leur ville ainsi qu'une date spécifique pour obtenir des suggestions vestimentaires adaptées aux conditions météorologiques.",
+  "keywords": [],
+  "homepage": "https://github.com/ashwiniaxo/WeatherWear#readme",
+  "bugs": {
+    "url": "https://github.com/ashwiniaxo/WeatherWear/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashwiniaxo/WeatherWear.git"
+  },
+  "license": "ISC",
+  "author": "Ashwinia Yogarajah",
   "type": "module",
+  "main": "serveur.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node api/serveur.js"
   },
-  "keywords": [],
-  "author": "Ashwinia Yogarajah",
-  "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.4.5",
+    "dotenv": "^16.4.7",
     "express": "^4.21.1",
     "node-fetch": "^3.3.2"
   }
