@@ -12,6 +12,3 @@ node install node-fetch
 
 # Commande pour loader des variables d'environnement dans un projet Node.js:
 npm install dotenv
-
-# Commande pour redeployer sur vercel
-vercel --prod
